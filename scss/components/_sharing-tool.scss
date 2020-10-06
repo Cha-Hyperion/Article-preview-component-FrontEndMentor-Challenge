@@ -1,0 +1,47 @@
+.sharing-tool {
+    &--desktop {
+        display: none;
+    }
+    &--mobile {
+        height: 13%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 13%;
+        background-color: $color-text-primary;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        //display: none;
+
+        
+    }
+
+    &__link {
+        height: 1.8rem;
+        width: 1.8rem;
+        border-radius: 1.8rem;
+        content: '';
+        background-color: $color-text-tertiary;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &--arrow-white {
+        background-color: $color-text-secondary;
+
+        }
+    }
+
+    &__share {
+        color: $color-text-tertiary;
+        text-transform: uppercase;
+        letter-spacing: .25rem;
+    }
+
+    &__social {
+        margin-left: -3rem;
+        a {
+            margin: .3rem;
+        }
+    }
+}
