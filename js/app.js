@@ -1,39 +1,51 @@
 var app = {
  
-    social: document.querySelector('.sharing-tool--mobile'),
+    socialMob: document.querySelector('.sharing-tool--mobile'),
+    socialDes: document.querySelector('.sharing-tool--desktop'),
     author: document.querySelector('.card__author'),
+    screenSize: window.screen.width,
+    count: 0,
     
     init: function() {
-      console.log('init');
-      if (app.social) {
         app.addActionsEventListeners();
-      }
+      
     },
   
     addActionsEventListeners: function() {
-      console.log('addActionsEventListeners');
       let openElt = document.querySelector('.sharing-tool__link');
-      
-        openElt.addEventListener('click', app.open);
-      
-  
       let closeElt = document.querySelector('.sharing-tool__link--arrow-white');
-      
-        closeElt.addEventListener('click', app.close);
-      
-    },
-      
-    open: function() {
-      console.log('open');
-      app.author.style.display = "none";
-      app.social.style.display = "flex";
 
+      if (app.screenSize > 800 ) {
+        openElt.addEventListener('click', app.toggleDesktop);
+      }
+      else {
+        openElt.addEventListener('click', app.open);
+        closeElt.addEventListener('click', app.close);
+      }
     },
-  
+    
+    toggleDesktop: function () {
+      window.onresize = function(){ location.reload(); }
+      app.count += 1;
+
+      if (app.screenSize > 800 && app.count%2 == 1 ) {
+        app.socialDes.style.display = "flex";
+      } 
+      else {
+        app.socialDes.style.display = "none";
+      }
+    },
+
+    open: function() {
+      window.onresize = function(){ location.reload(); }
+      app.author.style.display = "none";
+      app.socialMob.style.display = "flex";
+     },
+     
     close: function() {
-      console.log('close');
+      window.onresize = function(){ location.reload(); }
       app.author.style.display = "flex";
-      app.social.style.display = "none";
+      app.socialMob.style.display = "none";
     },
     
   };

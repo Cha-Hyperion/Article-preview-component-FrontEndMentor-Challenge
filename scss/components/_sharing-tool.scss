@@ -1,21 +1,44 @@
 .sharing-tool {
     &--desktop {
         display: none;
+        @include breakpoint-large {
+            height: 60px;
+            width: 277px;
+            background-color: $color-text-primary;
+            border-radius: 10px;
+            //display: flex;
+            align-items: center;
+            justify-content: space-around;
+            position: absolute;
+            right: -53px;
+            bottom: 80px;
+
+
+
+            &__arrow {
+                position: absolute;
+                width: 0; 
+                height: 0; 
+                border-left: 12px solid transparent;
+                border-right: 12px solid transparent;
+                border-top: 12px solid $color-text-primary;
+                bottom: -12px;
+                ;
+            }
+        }
+
     }
     &--mobile {
         height: 27%;
         display: flex;
         align-items: center;
         justify-content: space-around;
-
         //padding: 0 13%;
         padding: 0 3%;
         background-color: $color-text-primary;
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 10px;
         display: none;
-
-        
     }
 
     &__link {
@@ -27,6 +50,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        
+
 
         &--arrow-white {
         background-color: $color-text-secondary;
@@ -42,6 +67,7 @@
 
     &__social {
         margin-left: -3rem;
+        
         a {
             margin: .3rem;
         }

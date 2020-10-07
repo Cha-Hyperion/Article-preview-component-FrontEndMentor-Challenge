@@ -14,6 +14,7 @@
         flex-direction: initial;
         height: 300px;
         width: 840px;
+        position: relative;
 
     }
 
@@ -77,10 +78,7 @@
         font-weight: $font-weight-bold;
         @include breakpoint-large {
         font-size: $font-size-very-large;
-        line-height: 1.3;
-        
-
-            
+        line-height: 1.3;  
         }
     }
     &__text {
