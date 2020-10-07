@@ -1,5 +1,7 @@
 # Frontend Mentor - Article preview component
 
+👀 See my version in production : https://article-preview-component-front-end-mentor-challenge.vercel.app/
+
 ![Design preview for the Article preview component coding challenge](./design/desktop-preview.jpg)
 
 ## Welcome! 👋
