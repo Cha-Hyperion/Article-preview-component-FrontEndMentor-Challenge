@@ -2,6 +2,8 @@
 
 👀 See my version in production : https://article-preview-component-front-end-mentor-challenge.vercel.app/
 
+👩🏼‍💻 My personal website : https://charlenezybala.com
+
 ![Design preview for the Article preview component coding challenge](./design/desktop-preview.jpg)
 
 ## Welcome! 👋
